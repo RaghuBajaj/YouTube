@@ -1,0 +1,77 @@
+.Container_Dsb{
+    width: 15rem;
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    flex-direction: column;
+}
+.top_Dsb{
+    display: flex;
+    align-items: center;
+}
+.line_Dsb{
+    cursor: pointer;
+    margin: 0.2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 0.5rem;
+    /* border: 1px solid white; */
+    border-radius: 10rem;
+}
+.line_Dsb:hover{
+    background-color:rgb(43, 43, 43) ;
+}
+.line_Dsb p{
+    margin: 5px;
+    width: 17px;
+    background-color: white;
+    height: 1.2px;
+}
+.logo_div_Dsb{
+    display: flex;
+    text-decoration: none;
+}
+.logo_Dsb{
+    object-fit: cover;
+    width: 30px;
+    padding: 11px 2px 9px 2px;
+}
+.title_Dsb{
+    margin: auto;
+    color: white;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+}
+.option_box_Dsb{
+    margin: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid white; */
+}
+.options_div_Dsb{
+    cursor: pointer;
+    padding-left: 4%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    /* border: 1px solid white; */
+    gap: 10%;
+}
+.options_div_Dsb:hover{
+    background-color: rgb(43, 43, 43);
+}
+.option_Dsb{
+    color: rgb(255, 255, 255,0.855);
+    font-size: small;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btw_line_Dsb{
+    height: 0.5px;
+    background-color: rgb(90, 90, 90);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}

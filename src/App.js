@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import Navbar from './Components/Navbar/Navbar'
+import { Routes } from 'react-router-dom'
+import Leftsidebar from './Components/Leftsidebar/Leftsidebar'
+import Drawersliderbar from './Components/Leftsidebar/Drawersliderbar'
+import Allroutes from './Allroutes'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='Container_App'>
+      <Navbar/>
+      {/* <Leftsidebar/> */}
+      <Allroutes/>
+      {/* <Drawersliderbar/> */}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

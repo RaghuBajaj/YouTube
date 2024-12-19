@@ -1,0 +1,62 @@
+.contaner_nbar{
+    display: flex;
+    height: calc(3.5rem - 2px);
+    align-items: center;
+    background-color: rgb(33, 33, 33);
+    justify-content: space-between;
+    border: 1px solid;
+}
+.leftslide_nbar{
+    display: flex;
+    height: 3.3rem;
+}
+.grid_nbar{
+    cursor: pointer;
+    margin: 0.2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.7rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid transparent;
+    border-radius: 100%;
+}
+.grid_nbar p{
+    margin: 0.5px;
+    width: 1.2rem;
+    height: 0.1rem;
+    background-color: rgb(255,244,244);
+}
+.logoTitle_nbar{
+    display: flex;
+    text-decoration: none;
+}
+.logo_nbar{
+    object-fit: cover;
+    width: 33px;
+    padding: 10px 3px 10px 3px;
+}
+.title_nbar{
+    margin: auto;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.app_Box{
+    width: 25px ;
+    margin: auto 0.7rem;
+    height: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.appBox{
+    border: 1px solid white;
+    margin: 0.1rem;
+    width: 2px;
+    height: 2px;
+}
+
+
