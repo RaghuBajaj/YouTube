@@ -24,19 +24,21 @@ const Navbar = () => {
             </Link>
         </div>
         <Searchbar/>
-        <RiVideoAddLine size={22}/>
-        <div className='app_Box'>
-            <p className='appBox'></p>
-            <p className='appBox'></p>
-            <p className='appBox'></p>
-            <p className='appBox'></p>
-            <p className='appBox'></p>
-            <p className='appBox'></p>
-            <p className='appBox'></p>
-            <p className='appBox'></p>
-            <p className='appBox'></p>
+        <div className='icons_div_nbar'>
+            <RiVideoAddLine size={22} className='icons_nbar'/>
+            <div className='app_Box'>
+                <p className='appBox'></p>
+                <p className='appBox'></p>
+                <p className='appBox'></p>
+                <p className='appBox'></p>
+                <p className='appBox'></p>
+                <p className='appBox'></p>
+                <p className='appBox'></p>
+                <p className='appBox'></p>
+                <p className='appBox'></p>
+            </div>
+            <IoMdNotificationsOutline size={22} className='icons_nbar'/>
         </div>
-        <IoMdNotificationsOutline size={22}/>
         <div>
             {currentUser ? (
                 <>

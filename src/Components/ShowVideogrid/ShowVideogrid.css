@@ -1,5 +1,12 @@
 .container_svg{
+    margin: 0;
+    width: 100%;
+    padding: 1%;
+    /* height: min-content; */
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-around;
+    box-sizing: content-box;
+    /* border: 1px solid yellow; */
 }

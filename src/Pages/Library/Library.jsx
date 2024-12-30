@@ -19,13 +19,14 @@ const Library = () => {
           </Link>
 
           <div className='channel_user_Lib'>
+
             <Link to={'/youtube/feed/channel'} className='link_full_Lib'>
-            <div className='c_u_name_Lib'>Raghunandan Bajaj</div>
-            <div className='c_info_div_Lib'>
-              <p className='c_info_1_Lib'>@RaghunandanBajaj-w8m</p>
-              <p className='dot_Lib'></p>
-              <p className='c_info_1_Lib'>View channel</p>
-            </div>
+              <div className='c_u_name_Lib'>Raghunandan Bajaj</div>
+              <div className='c_info_div_Lib'>
+                <p className='c_info_1_Lib'>@RaghunandanBajaj-w8m</p>
+                <p className='dot_Lib'></p>
+                <p className='c_info_1_Lib'>View channel</p>
+              </div>
             </Link>
             
             <div className='options_div_Lib'>
@@ -40,6 +41,7 @@ const Library = () => {
             </div>
 
           </div>
+          
         </div>
 
         <div className='child_container_Lib'>

@@ -2,6 +2,7 @@ import React from 'react';
 import Leftsidebar from '../../Components/Leftsidebar/Leftsidebar';
 import ShowVideogrid from '../../Components/ShowVideogrid/ShowVideogrid';
 import './Home.css';
+import { allvideos } from '../YourVideo/videoAssets';
 
 const Home = () => {
   const vid = [
@@ -24,10 +25,30 @@ const Home = () => {
       id:4,
       title:'video3',
       uploader:'raghu'
+    },
+    {
+      id:5,
+      title:'video4',
+      uploader:'raghu'
+    },
+    {
+      id:6,
+      title:'video5',
+      uploader:'raghu'
+    },
+    {
+      id:7,
+      title:'video6',
+      uploader:'raghu'
+    },
+    {
+      id:8,
+      title:'video7',
+      uploader:'raghu'
     }
   ];
   const navlist = [
-    "All","Live","New","c++","python","react.js","css","html"
+    "All","Live","New","C++","Python","React.js","CSS","HTML"
   ];
   return (
     <div className='container_hom'>
@@ -43,7 +64,7 @@ const Home = () => {
           })}
         </div>
         <div className='videogrid_hom'>
-        <ShowVideogrid vid={vid} />
+          <ShowVideogrid vid={allvideos} />
         </div>
       </div>
     </div>

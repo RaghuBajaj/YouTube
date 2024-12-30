@@ -1,0 +1,101 @@
+.container_SV{
+    /* overflow: hidden; */
+    cursor: pointer;
+    flex: 1 1 30%;
+    margin: 0.4rem;
+    max-width: 24rem;
+    height: 56vh;
+    display: flex;
+    flex-direction: column;
+    /* border-radius: 1rem; */
+    /* border: 1px solid red; */
+}
+.video_div_SV{
+    /* width: 99.5%; */
+    margin-bottom: 0.5rem;
+    height: 64%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-color: rgb(27, 27, 27);
+    border: 1px solid rgb(27, 27, 27);
+}
+.video_SV{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+.container_SV:hover .video_div_SV{
+    border-radius: 0rem;
+}
+.video_info_div_SV{
+    width: 100%;
+    display: flex;
+    gap: 2%;
+}
+.char_div_SV{
+    width: 14%;
+    /* border: 1px solid blue; */
+}
+.char0_SV{
+    margin: 0;
+    padding: 0;
+    width: 3em;
+    height: 3em;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    background-color: aquamarine;
+    border-radius: 3rem;
+    /* border: yellowgreen; */
+}
+.video_dec_div_SV{
+    width: 78%;
+    /* border: 1px solid gray; */
+}
+.vid_title_SV{
+    margin: 0;
+    padding-top: 0.16rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.14rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255,0.855);
+    /* border: 1px solid seagreen; */
+}
+.vid_uploader_SV{
+    margin: 0;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    font-size: 0.86rem;
+    color: rgba(195, 195, 195, 0.855);
+}
+.view_time_SV{
+    display: flex;
+    align-items: center;
+}
+.dot_SV{
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    width: 2px;
+    height: 2px;
+    background-color:rgba(195, 195, 195, 0.855);
+    border-radius: 1rem;
+}
+.threedot_SV{
+    width: 4%;
+    padding-top: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid white; */
+}
+.threedot_SV p{
+    margin: 0.13rem;
+    width: 0.24rem;
+    height: 0.24rem;
+    background-color: rgb(255, 255, 255,0.855);
+    border-radius: 1rem;
+}

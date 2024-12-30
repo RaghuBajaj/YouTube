@@ -1,5 +1,13 @@
 .Container_App{
-    overflow: hidden;
+    overflow-y: auto;
     height: 100vh;
     width: 100vw;
+    background-color: rgb(18, 18, 18);
+}
+.container_Ar{
+    overflow-x: hidden;
+}
+.dsb_App{
+    position: fixed;
+    z-index: 91;
 }

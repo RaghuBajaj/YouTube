@@ -1,6 +1,7 @@
 import React from 'react'
 import './Drawersliderbar.css';
 import logo from '../Navbar/logo.png';
+import { Link } from 'react-router-dom';
 
 const Drawersliderbar = () => {
   return (
@@ -12,10 +13,10 @@ const Drawersliderbar = () => {
                 <p></p>
                 <p></p>
             </div>
-            <div className='logo_div_Dsb'>
+            <Link to={'/youtube/feed'}  className='logo_div_Dsb'>
                 <img src={logo} className='logo_Dsb'/>
                 <div className='title_Dsb'>Youtube</div>
-            </div>
+            </Link>
         </div>
 
         <div className='option_box_Dsb'>

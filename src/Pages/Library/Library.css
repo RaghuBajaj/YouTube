@@ -3,7 +3,7 @@
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    background-color: rgb(37, 37, 37);
+    background-color: rgb(18, 18, 18);
     gap: 1rem;
 }
 .child_container1_Lib{
@@ -39,7 +39,6 @@
     flex-direction: column;
 }
 .link_full_Lib{
-    cursor: pointer;
     width: 100%;
     text-decoration: none;
 }

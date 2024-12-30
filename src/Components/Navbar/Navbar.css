@@ -1,26 +1,33 @@
 .contaner_nbar{
+    overflow-x: hidden;
+    width: auto;
     display: flex;
-    height: calc(3.5rem - 2px);
+    height: 10vh;
     align-items: center;
-    background-color: rgb(33, 33, 33);
+    background-color: rgb(18, 18, 18);
     justify-content: space-between;
-    border: 1px solid;
+    /* border: 1px solid wheat; */
 }
 .leftslide_nbar{
     display: flex;
     height: 3.3rem;
+    /* border: 1px solid wheat; */
 }
 .grid_nbar{
     cursor: pointer;
     margin: 0.2rem;
-    margin-left: 0.5rem;
+    margin-left: 0.7rem;
     margin-right: 0.7rem;
-    padding: 0.5rem;
+    padding: 0.75rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     border: 1px solid transparent;
-    border-radius: 100%;
+    border-radius: 3rem;
+    /* border: 1px solid blue; */
+}
+.grid_nbar:hover{
+    background-color: rgb(41,41,41);
 }
 .grid_nbar p{
     margin: 0.5px;
@@ -45,6 +52,7 @@
     align-items: center;
 }
 .app_Box{
+    cursor: pointer;
     width: 25px ;
     margin: auto 0.7rem;
     height: 25px;
@@ -58,5 +66,16 @@
     width: 2px;
     height: 2px;
 }
-
-
+.icons_div_nbar{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+.icons_nbar{
+    cursor: pointer;
+    margin: 1rem;
+    color: white;
+}
