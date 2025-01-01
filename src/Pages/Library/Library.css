@@ -99,15 +99,30 @@
     color: rgb(255, 255, 255,0.855);
 }
 .child_container_Lib{
+    /* margin: 0;
+    padding: 0;
+    height: auto; */
     display: flex;
     flex-direction: column;
     /* border: 1px solid gray; */
 }
 .title_div_Lib{
     padding-top: 1%;
-    padding-bottom: 1%;
+    /* padding-bottom: 0.3%; */
     display: flex;
     justify-content: space-between;
+    /* border: 1px solid red; */
+}
+.video_div_Lib{
+    /* overflow: auto; */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 36vh;
+    gap: 0.25%;
+    display: flex;
+    justify-content: start;
+    border: 1px solid red;
 }
 .title_Lib{
     cursor: pointer;

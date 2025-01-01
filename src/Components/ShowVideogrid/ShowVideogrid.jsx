@@ -7,7 +7,7 @@ const ShowVideogrid = ({vid}) => {
     <div className='container_svg'>
         {vid?.map(video=>{
             return(
-                <ShowVideo video={video}/>
+                <ShowVideo key={video.id} video={video}/>
             )
         })}
       

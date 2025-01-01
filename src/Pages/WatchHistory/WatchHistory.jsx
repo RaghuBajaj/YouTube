@@ -1,15 +1,24 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Leftsidebar from '../../Components/Leftsidebar/Leftsidebar'
 import { YouTubeContext } from '../../Context'
+import SideVideos from '../VideoPage/SideVideos';
+import './WatchHistory.css';
 
 const WatchHistory = () => {
-  const {allvideos,history} = useContext(YouTubeContext);
+  const {allvideos,watchhistory} = useContext(YouTubeContext);
   return (
-    <div className='container_hom'>
+    <div className='container_WH'>
       <div className='leftside_hom'>
         <Leftsidebar/>
-        <div>
-          {}
+      </div>
+      <div className='Vid_part2_WH'>
+        <div className='vid_list_WH'>
+          {watchhistory.map((htry,idx)=>{
+            const vid = allvideos.find((item)=> item.id === htry); 
+            return(
+              <SideVideos key={idx} vid={vid}/>
+            )
+          })}
         </div>
       </div>
     </div>

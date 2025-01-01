@@ -1,0 +1,24 @@
+.container_WH{
+    width: 100%;
+    display: flex;
+    height: auto;
+    gap: 2%;
+    /* border: 1px solid red; */
+}
+.Vid_part2_WH{
+    padding: 0;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+}
+.vid_list_WH{
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    /* border: 1px solid greenyellow; */
+}

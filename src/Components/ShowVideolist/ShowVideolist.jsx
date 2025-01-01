@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import './ShowVideolist.css';
+import { YouTubeContext } from '../../Context';
 
 const ShowVideolist = () => {
+  const {allvideos}= useContext(YouTubeContext);
   return (
-    <div>
-      
+    <div className='container_SVl'>
+      <div className='list_cont_SVl'>
+        {}
+      </div>
     </div>
   )
 }

@@ -8,8 +8,12 @@ const YouTubeContextProvider = (props) => {
     const [showVid,setShowVid] = useState({});
     const [drawSlidbar,setDrawSlidbar] = useState(false);
     const [history,setHistory] = useState([]);
+    const [watchhistory,setWatchHistory] = useState([]);
     const [likedVideo,setLikedVideo] = useState([]);
     const navigate = useNavigate();
+    useEffect(()=>{
+        setWatchHistory(history.reverse());
+    },[history]);
     useEffect(()=>{
         console.log("history",history);
         console.log("likedvidid",likedVideo);
@@ -24,7 +28,8 @@ const YouTubeContextProvider = (props) => {
         showVid,
         setShowVid,
         navigate,
-        allvideos
+        allvideos,
+        watchhistory,setWatchHistory
     };
     return(
         <YouTubeContext.Provider value={value}>
