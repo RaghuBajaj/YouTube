@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react'
 import './App.css';
-import Navbar from './Components/Navbar/Navbar'
-import Leftsidebar from './Components/Leftsidebar/Leftsidebar'
-import Drawersliderbar from './Components/Leftsidebar/Drawersliderbar'
-import Allroutes from './Allroutes'
-import { YouTubeContext } from './Context';
+import Navbar from './Components/Navbar/Navbar.jsx'
+import Leftsidebar from './Components/Leftsidebar/Leftsidebar.jsx'
+import Drawersliderbar from './Components/Leftsidebar/Drawersliderbar.jsx'
+import Allroutes from './Allroutes.jsx'
+import { YouTubeContext } from './Context.js';
 
 const App = () => {
   const {drawSlidbar} = useContext(YouTubeContext);
