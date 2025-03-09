@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { RiVideoAddLine } from "react-icons/ri"
 import { IoMdNotificationsOutline } from "react-icons/io"
 import { BiUserCircle } from "react-icons/bi"
@@ -8,7 +8,7 @@ import './Navbar.css';
 import logo from './logo.png';
 
 const Navbar = () => {
-    const [currentUser,setCurrentUser]=useState({});
+    // const [currentUser,setCurrentUser]=useState({});
   return (
     <>
     <div className='contaner_nbar'>
@@ -40,7 +40,7 @@ const Navbar = () => {
             <IoMdNotificationsOutline size={22} className='icons_nbar'/>
         </div>
         <div>
-            {currentUser ? (
+            {/* {currentUser ? (
                 <>
                 <div>
                     <p>
@@ -52,7 +52,7 @@ const Navbar = () => {
                 <BiUserCircle size={22}/>
                 <b>Sign in</b>
             </p>
-            </>)}
+            </>)} */}
         </div>
     </div>
     {}
