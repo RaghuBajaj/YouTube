@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext} from 'react'
 import Leftsidebar from '../../Components/Leftsidebar/Leftsidebar'
 import { YouTubeContext } from '../../Context'
 import SideVideos from '../VideoPage/SideVideos';

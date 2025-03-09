@@ -9,7 +9,9 @@ import {allvideos} from '../YourVideo/videoAssets';
 import SideVideos from './SideVideos';
 
 const VideoPage = () => {
-  const {showVid,setShowVid,likedVideo,
+  const {showVid,
+    // setShowVid,
+    likedVideo,
     setLikedVideo,} = useContext(YouTubeContext);
 
   const handleAddLike = ()=>{

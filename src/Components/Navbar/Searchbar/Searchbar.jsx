@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BsMicFill } from "react-icons/bs";
-import { FaSearch } from "react-icons/fa";
 import { SlMagnifier } from "react-icons/sl";
 import { Link } from 'react-router-dom';
-import SearchList from './SearchList';
+// import { FaSearch } from "react-icons/fa";
+// import SearchList from './SearchList';
 import "./Searchbar.css";
 
 const Searchbar = () => {
-    const [searchQuery,setSearchQuery] = useState('');
-    const [searchList,setSearchList] = useState(false);
-    const TitleArray=["video1","video2","video3","video4","video5","animation video","Movies"]
+    // const [searchQuery,setSearchQuery] = useState('');
+    // const [searchList,setSearchList] = useState(false);
+    // const TitleArray=["video1","video2","video3","video4","video5","animation video","Movies"]
   return (
     <>
       <div className='container_Sb'>

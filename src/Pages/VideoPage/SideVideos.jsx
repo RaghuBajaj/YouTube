@@ -3,7 +3,9 @@ import './SideVideos.css';
 import { YouTubeContext } from '../../Context';
 
 const SideVideos = ({vid}) => {
-    const {setShowVid,navigate,setHistory,history} = useContext(YouTubeContext);
+    const {setShowVid,navigate,setHistory,
+        // history
+    } = useContext(YouTubeContext);
     const handleSelectVid =()=>{
         setShowVid(vid);
         // setHistory((pre)=>{

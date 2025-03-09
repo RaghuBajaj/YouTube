@@ -1,7 +1,7 @@
 import React from 'react'
 import './Leftsidebar.css'
 import {AiOutlineHome} from "react-icons/ai"
-import {MdOutlineExplore, MdOutlineSubscriptions, MdOutlineVideoLibrary} from "react-icons/md"
+import {MdOutlineExplore, MdOutlineSubscriptions, } from "react-icons/md"
 import { NavLink } from 'react-router-dom'
 
 const Leftsidebar = () => {
@@ -20,7 +20,7 @@ const Leftsidebar = () => {
       </div>
 
       <div className='icon_sidebar_div_Lsb'>
-        <img width={24} className='icon_sidebar_Lsb'/>
+        <img width={24} className='icon_sidebar_Lsb'alt=''/>
         <div className='text_sidebar_Lsb'>Shorts</div>
       </div>
 

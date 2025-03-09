@@ -5,48 +5,48 @@ import './Home.css';
 import { allvideos } from '../YourVideo/videoAssets';
 
 const Home = () => {
-  const vid = [
-    {
-      id:1,
-      title:'video0',
-      uploader:'raghu'
-    },
-    {
-      id:2,
-      title:'video1',
-      uploader:'raghu'
-    },
-    {
-      id:3,
-      title:'video2',
-      uploader:'raghu'
-    },
-    {
-      id:4,
-      title:'video3',
-      uploader:'raghu'
-    },
-    {
-      id:5,
-      title:'video4',
-      uploader:'raghu'
-    },
-    {
-      id:6,
-      title:'video5',
-      uploader:'raghu'
-    },
-    {
-      id:7,
-      title:'video6',
-      uploader:'raghu'
-    },
-    {
-      id:8,
-      title:'video7',
-      uploader:'raghu'
-    }
-  ];
+  // const vid = [
+  //   {
+  //     id:1,
+  //     title:'video0',
+  //     uploader:'raghu'
+  //   },
+  //   {
+  //     id:2,
+  //     title:'video1',
+  //     uploader:'raghu'
+  //   },
+  //   {
+  //     id:3,
+  //     title:'video2',
+  //     uploader:'raghu'
+  //   },
+  //   {
+  //     id:4,
+  //     title:'video3',
+  //     uploader:'raghu'
+  //   },
+  //   {
+  //     id:5,
+  //     title:'video4',
+  //     uploader:'raghu'
+  //   },
+  //   {
+  //     id:6,
+  //     title:'video5',
+  //     uploader:'raghu'
+  //   },
+  //   {
+  //     id:7,
+  //     title:'video6',
+  //     uploader:'raghu'
+  //   },
+  //   {
+  //     id:8,
+  //     title:'video7',
+  //     uploader:'raghu'
+  //   }
+  // ];
   const navlist = [
     "All","Live","New","C++","Python","React.js","CSS","HTML"
   ];

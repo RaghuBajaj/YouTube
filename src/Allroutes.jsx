@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css';
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home/Home'
 import Library from './Pages/Library/Library'
 import LikedVideo from './Pages/LikedVideo/LikedVideo'
@@ -14,6 +14,7 @@ const Allroutes = () => {
   return (
     <div className='container_Ar'>
       <Routes>
+          <Route path="/" element={<Navigate to="/youtube/feed" replace />} />
           <Route path='/youtube/feed' element={<Home/>} />
           <Route path='/youtube/feed/Library' element={<Library/>} />
           <Route path='/youtube/feed/likedvideo' element={<LikedVideo/>} />
