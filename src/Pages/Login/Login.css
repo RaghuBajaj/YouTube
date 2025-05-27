@@ -1,0 +1,135 @@
+.login {
+  width: 100%;
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(33, 33, 33, 0.461);
+}
+.login_box {
+  padding: 1%;
+  width: 70%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  border-radius: 30px;
+}
+.parts_box {
+    margin: 1%;
+    padding: 1%;
+    width: 45%;
+    /* border: 1px solid red; */
+}
+.log {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding: 1%;
+  width: auto;
+  /* display: flex; */
+  gap: 1%;
+  /* border: 1px solid red; */
+}
+.lo_h {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: xx-large;
+  color: white;
+}
+
+.line_log {
+  margin-left: 2%;
+  height: 2px;
+  background-color: white;
+  width: 6%;
+}
+
+.lo_div {
+  margin-top: 3%;
+  margin-bottom: 1%;
+  padding: 1%;
+  width: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid red; */
+}
+
+.lo_p {
+  width: auto;
+  margin: 1%;
+  padding-bottom: 1%;
+  font-size: medium;
+  line-height: 20px;
+  font-weight: 500;
+  color: white;
+  font-family: unset;
+}
+.lo_inp {
+  width: 98%;
+  margin: 2px;
+  margin-top: 2%;
+  padding: 3%;
+  padding-left: 4%;
+  box-sizing: border-box;
+  font-size: small;
+  color: white;
+  border: 1px solid rgba(128, 128, 128, 0.751);
+  border-radius: 5px;
+  background-color: rgb(62, 62, 62);
+}
+.btn_div {
+  margin-top: 5%;
+  margin-bottom: 1%;
+  padding: 1%;
+  width: auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: end;
+  gap: 6%;
+}
+.create {
+  cursor: pointer;
+  padding: 3%;
+  width: auto;
+  font-size: small;
+  font-weight: bold;
+  border-radius: 30px;
+  border: none;
+  color: rgba(148, 169, 238, 0.982);
+  background-color: rgba(33, 33, 33, 0.461);
+}
+.lo_btn {
+  width: auto;
+  padding: 3%;
+  background-color: rgba(148, 169, 238, 0.982);;
+  border: 1px solid black;
+  color: rgb(50, 61, 114);
+  font-size: small;
+  font-weight: 600;
+  border-radius: 30px;
+}
+.lo_btn:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  background-color: rgba(155, 177, 252, 0.982);
+}
+.lo_btn:active {
+  background-color: rgba(116, 140, 218, 0.982);
+}
+
+.red {
+  margin-left: 1%;
+  margin-top: 0;
+  font-size: x-small;
+  font-family: 700;
+  color: red;
+  font-family: cursive;
+}
+.red span {
+  font-weight: 700;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

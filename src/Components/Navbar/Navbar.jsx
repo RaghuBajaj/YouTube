@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { RiVideoAddLine } from "react-icons/ri"
 import { IoMdNotificationsOutline } from "react-icons/io"
-import { BiUserCircle } from "react-icons/bi"
+// import { BiUserCircle } from "react-icons/bi"
+import { VscAccount } from "react-icons/vsc";
 import Searchbar from './Searchbar/Searchbar'
 import { Link } from 'react-router-dom'
 import './Navbar.css';
-import logo from './logo.png';
+import logo from '../../logo.png';
+import { YouTubeContext } from '../../Context';
 
 const Navbar = () => {
+    const { setSignUp, navigate } = useContext(YouTubeContext);
     // const [currentUser,setCurrentUser]=useState({});
   return (
     <>
@@ -18,7 +21,7 @@ const Navbar = () => {
                 <p ></p>
                 <p ></p>
             </div>
-            <Link to={"/youtube/feed"} className='logoTitle_nbar'>
+            <Link to={"/youtube"} className='logoTitle_nbar'>
               <img src={logo} alt='' className='logo_nbar'/>
               <p className='title_nbar'>YouTube</p>
             </Link>
@@ -39,7 +42,11 @@ const Navbar = () => {
             </div>
             <IoMdNotificationsOutline size={22} className='icons_nbar'/>
         </div>
-        <div>
+        <div className='sign_div_nbar'>
+            <div className='logoSign_nbar' onClick ={() =>{setSignUp(true);navigate("/youtube/feed/accounts/login")}} >
+                <VscAccount size={22} className='userIcon_nbar'/>
+                <p className='sign_nbar'>SignUp</p>
+            </div>
             {/* {currentUser ? (
                 <>
                 <div>
