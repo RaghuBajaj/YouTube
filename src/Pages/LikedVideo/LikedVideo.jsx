@@ -1,28 +1,23 @@
-import React, { useContext } from 'react';
-import Leftsidebar from '../../Components/Leftsidebar/Leftsidebar';
-import { YouTubeContext } from '../../Context';
-import SideVideos from '../VideoPage/SideVideos';
-import '../WatchHistory/WatchHistory.css';
+import { useContext, useEffect } from "react";
+import { YouTubeContext } from "../../Context";
+import SideVideos from "../VideoPage/SideVideos";
+import "../WatchHistory/WatchHistory.css";
 
 const LikedVideo = () => {
-  const {likedVideo,allvideos} = useContext(YouTubeContext);
+  const { likedVideo, allvideos } = useContext(YouTubeContext);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  },[]);
   return (
-    <div className='container_WH'>
-      <div className='leftside_hom'>
-        <Leftsidebar/>
-      </div>
-      <div className='Vid_part2_WH'>
-        <div className='vid_list_WH'>
-          {likedVideo.map((htry,idx)=>{
-            const vid = allvideos.find((item)=> item.id === htry); 
-            return(
-              <SideVideos key={idx} vid={vid}/>
-            )
-          })}
-        </div>
+    <div className="container_WH">
+      <div className="Vid_part2_WH">
+        {likedVideo.map((itm, idx) => {
+          const vid = allvideos.find((item) => item.id === itm);
+          return <SideVideos key={idx} vid={vid} />;
+        })}
       </div>
     </div>
-  )
+  );
 };
 
 export default LikedVideo;

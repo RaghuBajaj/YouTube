@@ -1,20 +1,61 @@
 .login {
-  width: 100%;
-  padding: 1%;
+  margin: 0;
+  padding: 0;
+  /* padding: 1%; */
+  overflow: hidden;
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: rgba(33, 33, 33, 0.461);
+  background-color: rgb(34, 31, 31);
+  /* border:1px solid red; */
 }
 .login_box {
   padding: 1%;
   width: 70%;
   height: auto;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   background-color: black;
   border-radius: 30px;
+}
+.cross_div_box{
+  margin: 0%;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: end;
+  /* border: 1px solid red; */
+}
+.cross{
+  margin: 0%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 1.8%;
+  padding-right: 1.8%;
+  font-size: large;
+  color: rgb(115, 115, 115);
+  border: 1px solid rgb(115, 115, 115);
+  border-radius: 80px;
+}
+.cross:hover{
+  cursor: pointer;
+  transform: scale(1.02);
+  background-color: rgb(56, 56, 56);
+  color: white;
+}
+.body_box{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  /* border: 1px solid red; */
 }
 .parts_box {
     margin: 1%;
@@ -60,8 +101,9 @@
 
 .lo_p {
   width: auto;
-  margin: 1%;
+  margin: 0%;
   padding-bottom: 1%;
+  padding-left: 1%;
   font-size: medium;
   line-height: 20px;
   font-weight: 500;
@@ -73,7 +115,6 @@
   margin: 2px;
   margin-top: 2%;
   padding: 3%;
-  padding-left: 4%;
   box-sizing: border-box;
   font-size: small;
   color: white;

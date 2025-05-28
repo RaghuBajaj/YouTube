@@ -1,0 +1,97 @@
+.container_LV{
+    cursor: pointer;
+    margin-right: 0.1rem;
+    min-width: 22%;
+    max-width: 22%;
+    height: 16rem;
+    display: flex;
+    flex: 1 1 30%;
+    flex-direction: column;
+    box-sizing: border-box;
+    /* border: 1px solid rgb(16, 253, 91); */
+}
+.video_div_LV{
+    margin-bottom: 1%;
+    padding: 0;
+    height: 54%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    background-color: rgb(27, 27, 27);
+    border: 1px solid rgb(27, 27, 27);
+}
+.video_LV{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    transition: border-radius 0.3s ease;
+}
+.container_LV:hover .video_LV{
+    border-radius: 0;
+    transition: border-radius 0.3s ease;
+}
+.video_info_div_LV{
+    height: 44%;
+    width: 100%;
+    display: flex;
+    gap: 2%;
+    /* border: 1px solid rgb(27, 176, 84); */
+}
+.video_dec_div_LV{
+    height: 100%;
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    /* border: 1px solid gray; */
+}
+.vid_title_LV{
+    margin: 0;
+    padding-top: 0.1rem;
+    padding-bottom: 0.25rem;
+    font-size: 0.95rem;
+    font-weight: bold;
+    /* flex-wrap: wrap; */
+    text-wrap: wrap;
+    color: rgb(255, 255, 255,0.855);
+    /* border: 1px solid seagreen; */
+}
+.vid_uploader_LV{
+    margin: 0;
+    padding: 0;
+    font-size: 0.80rem;
+    color: rgba(195, 195, 195, 0.855);
+}
+.view_time_LV{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.dot_LV{
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    width: 2px;
+    height: 2px;
+    background-color:rgba(195, 195, 195, 0.855);
+    border-radius: 1rem;
+}
+.threedot_LV{
+    width: 4%;
+    padding-top: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid white; */
+}
+.threedot_LV p{
+    margin: 0.13rem;
+    width: 0.24rem;
+    height: 0.24rem;
+    background-color: rgb(255, 255, 255,0.855);
+    border-radius: 1rem;
+}
