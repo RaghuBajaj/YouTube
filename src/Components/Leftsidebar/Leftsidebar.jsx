@@ -1,4 +1,3 @@
-import React from 'react'
 import './Leftsidebar.css'
 import {AiOutlineHome} from "react-icons/ai"
 import {MdOutlineExplore, MdOutlineSubscriptions, } from "react-icons/md"
@@ -9,7 +8,7 @@ const Leftsidebar = () => {
   return (
     <div className="container_Lsb">
 
-      <NavLink to={'/youtube/feed'} className="icon_sidebar_div_Lsb">
+      <NavLink to={'/youtube'} className="icon_sidebar_div_Lsb">
         <AiOutlineHome size={24} className='icon_sidebar_Lsb'/>
         <div className='text_sidebar_Lsb'>Home</div>
       </NavLink>
@@ -20,14 +19,14 @@ const Leftsidebar = () => {
       </div>
 
       <div className='icon_sidebar_div_Lsb'>
-        <img width={24} className='icon_sidebar_Lsb'alt=''/>
+        {/* <img width={24} className='icon_sidebar_Lsb'alt='Shorts-logo'/> */}
         <div className='text_sidebar_Lsb'>Shorts</div>
       </div>
 
-      <div className='icon_sidebar_div_Lsb'>
+      <NavLink to={'/youtube/feed/Subscriptions'} className='icon_sidebar_div_Lsb'>
         <MdOutlineSubscriptions size={24} className='icon_sidebar_Lsb'/>
         <div className='text_sidebar_Lsb'>Subscription</div>
-      </div>
+      </NavLink>
 
       <NavLink to={'/youtube/feed/Library'} className='icon_sidebar_div_Lsb'>
         <MdOutlineExplore size={24} className='icon_sidebar_Lsb'/>
@@ -36,6 +35,6 @@ const Leftsidebar = () => {
       
     </div>
   )
-}
+};
 
-export default Leftsidebar
+export default Leftsidebar;

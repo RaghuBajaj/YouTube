@@ -16,8 +16,9 @@ function Login() {
     history: [],
     likedVideo: [],
     watchLater: [],
-    subscribedChannels: [],
+    playlists: [],
     subscribers: [],
+    subscribedChannels: [],
   });
 
   const initialInfo = useCallback(() => {
@@ -63,7 +64,7 @@ function Login() {
           </div>
           <div className="body_box">
             <div className="parts_box">
-              <img src={logo} alt="" className="" />
+              <img src={logo} alt="Youtube-logo" className="" />
               <div className="log">
                 <p className="lo_h">Create a YouTube Account</p>
                 <p className="lo_p">Enter your name</p>
@@ -177,10 +178,10 @@ function Login() {
           </div>
           <div className="body_box">
             <div className="parts_box">
-              <img src={logo} alt="" className="" />
+              <img src={logo} alt="Youtube-logo" className="" />
               <div className="log">
                 <p className="lo_h">Sign in</p>
-                <p className="lo_p">to continue to TouTube</p>
+                <p className="lo_p">to continue to YouTube</p>
               </div>
             </div>
             <div className="parts_box">

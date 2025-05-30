@@ -1,18 +1,17 @@
 import React from 'react'
 import './ShowVideogrid.css';
-import ShowVideo from '../ShowVideo/ShowVideo'
+import HomeVideo from '../HomeVideo/HomeVideo'
 
-const ShowVideogrid = ({vid}) => {
+const ShowVideogrid = ({ vid }) => {
   return (
     <div className='container_svg'>
-        {vid?.map(video=>{
+        { vid?.map(video => {
             return(
-                <ShowVideo key={video.id} video={video}/>
+                <HomeVideo key={ video.id } video={ video }/>
             )
         })}
-      
     </div>
   )
-}
+};
 
-export default ShowVideogrid
+export default ShowVideogrid;

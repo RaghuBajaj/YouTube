@@ -1,38 +1,44 @@
 .container_Sb{
     margin: 0;
     padding: 0;
-    height: 70%;
-    width: 50vw;
+    height: auto;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid rgb(37,37,37);
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
+    /* border: 1px solid rgb(37,37,37); */
+    /* border: 1px solid rgb(225, 255, 0); */
 }
 .child_cont_Sb{
+    width: 84%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-self: center;
-    width: 84%;
-    height: 100%;
-    border: 1px solid rgb(37,37,37);
     border-radius: 3rem;
+    /* border: 1px solid rgb(37,37,37); */
+    /* border: 1px solid rgb(9, 229, 86); */
 }
 .input_Sb{
+    padding: 1.5%;
     padding-left: 3%;
-    height: 100%;
-    width: 83%;
+    height: auto;
+    width: 86%;
+    color: white;
     font-size: medium;
     box-sizing: border-box;
     border-top-left-radius: 3rem;
     border-bottom-left-radius: 3rem;
     background-color: rgb(18,18,18);
     border: 1px solid rgb(37,37,37);
+    /* border: 1px solid rgb(46, 12, 216); */
 }
 .FaSearch_div_Sb{
     margin: 0;
-    height: 100%;
+    padding: 1.5%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,9 +59,11 @@
 }
 .Mic_Sb{
     cursor: pointer;
-    width: 3%;
+    margin: 0;
+    padding: 1.5%;
+    width: auto;
+    height: auto;
     border-radius: 3rem;
     color: white;
-    padding: 0.75rem;
     background-color: rgb(51,51,51);
 }

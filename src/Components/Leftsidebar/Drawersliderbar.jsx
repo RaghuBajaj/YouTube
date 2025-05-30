@@ -1,4 +1,3 @@
-import React from 'react'
 import './Drawersliderbar.css';
 import logo from '../Navbar/logo.png';
 import { Link } from 'react-router-dom';
@@ -13,23 +12,23 @@ const Drawersliderbar = () => {
                 <p></p>
                 <p></p>
             </div>
-            <Link to={'/youtube/feed'}  className='logo_div_Dsb'>
-                <img alt='' src={logo} className='logo_Dsb' />
+            <Link to={'/youtube'}  className='logo_div_Dsb'>
+                <img alt='Youtube-logo' src={logo} className='logo_Dsb' />
                 <div className='title_Dsb'>Youtube</div>
             </Link>
         </div>
 
         <div className='option_box_Dsb'>
             <div className='options_div_Dsb'>
-                <img alt=''></img>
+                <img alt='Home-logo'></img>
                 <p className='option_Dsb'>Home</p>
             </div>
             <div className='options_div_Dsb'>
-                <img alt=''></img>
+                <img alt='Shorts-logo'></img>
                 <p className='option_Dsb'>Shorts</p>
             </div>
             <div className='options_div_Dsb'>
-                <img alt=''></img>
+                <img alt='Subscriptions-logo'></img>
                 <p className='option_Dsb'>Subscriptions</p>
             </div>
         </div>
@@ -37,34 +36,34 @@ const Drawersliderbar = () => {
         <div className='option_box_Dsb'>
             <div className='options_div_Dsb'>
                 <p className='option_Dsb'>You</p>
-                <img alt=''></img>
+                <img alt='user-logo'></img>
             </div>
             <div className='options_div_Dsb'>
-                <img alt=''></img>
+                <img alt='History-logo'></img>
                 <p className='option_Dsb'>History</p>
             </div>
             <div className='options_div_Dsb'>
-                <img alt=''></img>
+                <img alt='Playlists-logo'></img>
                 <p className='option_Dsb'>Playlists</p>
             </div>
             <div className='options_div_Dsb'>
-                <img alt=''></img>
+                <img alt='videos-logo'></img>
                 <p className='option_Dsb'>Your videos</p>
             </div>
             <div className='options_div_Dsb'>
-                <img alt=''></img>
+                <img alt='courses-logo'></img>
                 <p className='option_Dsb'>Your courses</p>
             </div>
             <div className='options_div_Dsb'>
-                <img alt=''></img>
+                <img alt='Products-logo'></img>
                 <p className='option_Dsb'>Your podcasts</p>
             </div>
             <div className='options_div_Dsb'>
-                <img alt=''></img>
+                <img alt='WatchLater-logo'></img>
                 <p className='option_Dsb'>Watch Later</p>
             </div>
             <div className='options_div_Dsb'>
-                <img alt=''></img>
+                <img alt='Like-logo'></img>
                 <p className='option_Dsb'>Liked videos</p>
             </div>
         </div>
@@ -74,54 +73,54 @@ const Drawersliderbar = () => {
                 <p className='option_Dsb'>Explore</p>
             </div>
             <div className='options_div_Dsb'>
-                <img alt=''></img>
+                <img alt='Trend-logo'></img>
                 <p className='option_Dsb'>Trending</p>
             </div>
             <div className='options_div_Dsb'>
-                <img alt=''></img>
+                <img alt='Shopping-logo'></img>
                 <p className='option_Dsb'>Shopping</p>
             </div>
             <div className='options_div_Dsb'>
-                <img alt=''></img>
+                <img alt='Music-logo'></img>
                 <p className='option_Dsb'>Music</p>
             </div>
             <div className='options_div_Dsb'>
-                <img alt=''></img>
+                <img alt='Film-logo'></img>
                 <p className='option_Dsb'>Films</p>
             </div>
             <div className='options_div_Dsb'>
-                <img alt=''></img>
+                <img alt='Live-logo'></img>
                 <p className='option_Dsb'>Live</p>
             </div>
             <div className='options_div_Dsb'>
-                <img alt=''></img>
+                <img alt='Gameing-logo'></img>
                 <p className='option_Dsb'>Gaming</p>
             </div>
             <div className='options_div_Dsb'>
-                <img alt=''></img>
+                <img alt='News-logo'></img>
                 <p className='option_Dsb'>News</p>
             </div>
             <div className='options_div_Dsb'>
-                <img alt=''></img>
+                <img alt='Sport-logo'></img>
                 <p className='option_Dsb'>Sport</p>
             </div>
         </div>
         <p className='btw_line_Dsb'></p>
         <div className='option_box_Dsb'>
             <div className='options_div_Dsb'>
-                <img alt=''></img>
+                <img alt='Settings-logo'></img>
                 <p className='option_Dsb'>Settings</p>
             </div>
             <div className='options_div_Dsb'>
-                <img alt=''></img>
+                <img alt='Report-logo'></img>
                 <p className='option_Dsb'>Report history</p>
             </div>
             <div className='options_div_Dsb'>
-                <img alt=''></img>
+                <img alt='Help-logo'></img>
                 <p className='option_Dsb'>Help</p>
             </div>
             <div className='options_div_Dsb'>
-                <img alt=''></img>
+                <img alt='FeedBack-logo'></img>
                 <p className='option_Dsb'>Send feedback</p>
             </div>
         </div>

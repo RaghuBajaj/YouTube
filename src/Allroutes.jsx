@@ -7,7 +7,7 @@ import SearchedPage from './Pages/SearchedPage/SearchedPage'
 import VideoPage from './Pages/VideoPage/VideoPage'
 import WatchHistory from './Pages/WatchHistory/WatchHistory'
 import WatchLater from './Pages/WatchLater/WatchLater'
-import Channel from './Pages/Channel/Channel'
+import Profile from './Pages/Profile/Profile.jsx';
 import Subscriptions from './Pages/Subscriptions/Subscriptions.jsx'
 
 // import Auth from "./Pages/Auth/Auth.jsx"
@@ -26,7 +26,7 @@ const Allroutes = () => {
           <Route path='/youtube/feed/videopage' element={<VideoPage/>} />
           <Route path='/youtube/feed/watchhistory' element={<WatchHistory/>} />
           <Route path='/youtube/feed/watchlater' element={<WatchLater/>} />
-          <Route path='/youtube/feed/channel' element={<Channel/>} />
+          <Route path='/youtube/feed/accounts/profile' element={<Profile/>} />
       </Routes>
     </ div>
   )

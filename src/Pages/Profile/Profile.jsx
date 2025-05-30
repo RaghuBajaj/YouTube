@@ -1,24 +1,21 @@
-import React from 'react'
-import Leftsidebar from '../../Components/Leftsidebar/Leftsidebar'
-import { Link } from 'react-router-dom';
-import './Channel.css';
+import { useContext } from 'react'
+// import { Link } from 'react-router-dom';
+import './Profile.css';
+import { YouTubeContext } from '../../Context';
 
-const Channel = () => {
+const Profile = () => {
+  const {user, handleLogout, navigate } = useContext(YouTubeContext);
   return (
     <div className='container_hom'>
-      <div className='leftside_hom'>
-        <Leftsidebar/>
-      </div>
-
       <div className='container_Lib'>
         <div className='child_container1_Lib'>
           <div className='User0_Lib'>
-            <p className='char0_Lib'>R</p>
+            <p className='char0_Lib'>{user.userName ? user.userName[0]: 'R'}</p>
           </div>
           <div className='channel_user_Lib'>
             <div to={'/youtube/feed/channel'} className='link_full_Lib'>
-              <div className='c_u_name_Lib'>Raghunandan Bajaj</div>
-              <p className='c_info_1_Lib p_cnl'>@RaghunandanBajaj-w8m</p>
+              <div className='c_u_name_Lib'>{user.userName ? user.userName: 'Raghunandan Bajaj'}</div>
+              <p className='c_info_1_Lib p_cnl'>{user.userName ? `@${user.userName}-w8m` : '@RaghunandanBajaj-w8m'}</p>
               <div className='c_info_div_Lib p_div_cnl'>
                 <p className='c_info_1_Lib'>More about this channel</p>
                 <p className='c_info_1_Lib p_more_cnl'>...more</p>
@@ -35,18 +32,17 @@ const Channel = () => {
           </div>
         </div>
 
-        <div className='child_container_Lib'>
+        {/* <div className='child_container_Lib'>
           <div className='title_div_Lib'>
             <Link to={'/youtube/feed/watchhistory'} className='title_Lib'>History</Link>
             <Link to={'/'} className='vm_Lib'>View all</Link>
           </div>
           {}
-        </div>
-
+        </div> */}
+        <div className='logout' onClick={()=>{handleLogout(); navigate('/youtube')}}>Logout</div>
       </div>
-
     </div>
   )
-}
+};
 
-export default Channel
+export default Profile;

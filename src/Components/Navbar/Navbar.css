@@ -39,6 +39,19 @@
     display: flex;
     text-decoration: none;
 }
+.search_nbar{
+    margin: 0;
+    padding: 0;
+    height: auto;
+    min-height: 3rem;
+    max-height: 100%;
+    width: 50%;
+    min-width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid rgb(255, 5, 5); */
+}
 .sign_div_nbar{
     cursor: pointer;
     height: 40%;
@@ -48,9 +61,15 @@
     align-items: center;
     justify-content: center;
 }
+.logo_nbar{
+    object-fit: cover;
+    width: 40px;
+    padding: 10px 3px 10px 3px;
+}
 .logoSign_nbar{
     margin: 1%;
-    padding: 0.15em;
+    padding: 0.2em;
+    width: 5.5em;
     /* border: 1px solid white; */
     border: 1px solid rgb(56, 79, 196);
     border-radius: 20px;
@@ -65,18 +84,23 @@
     color: rgb(56, 79, 196);
     margin: 0.2rem;
 }
-.logo_nbar{
-    object-fit: cover;
-    width: 33px;
-    padding: 10px 3px 10px 3px;
-}
 .sign_nbar{
-    margin: 2%;
+    margin: 1%;
     padding-bottom: 0.5%;
     /* color: white; */
     color: rgb(56, 79, 196);
     display: flex;
     align-items: center;
+}
+.userLogo_nbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    color: white;
+    background-color: rgb(56, 79, 196);
 }
 .title_nbar{
     margin: auto;
@@ -85,9 +109,18 @@
     display: flex;
     align-items: center;
 }
+.icons_div_nbar{
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+}
 .app_Box{
     cursor: pointer;
-    width: 25px ;
+    width: 20px ;
     margin: auto 0.7rem;
     height: 25px;
     display: flex;
@@ -99,15 +132,6 @@
     margin: 0.1rem;
     width: 2px;
     height: 2px;
-}
-.icons_div_nbar{
-    margin: 0;
-    padding: 0;
-    height: auto;
-    width: auto;
-    display: flex;
-    align-items: center;
-    /* border: 1px solid red; */
 }
 .icons_nbar{
     cursor: pointer;

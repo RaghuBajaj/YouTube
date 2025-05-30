@@ -17,18 +17,13 @@ const Searchbar = () => {
         <SlMagnifier  size={20}/>
         </div>
         <div className='child_cont_Sb'>
-
           <input type='text' placeholder='Search' className='input_Sb'/>
-
           <Link className='FaSearch_div_Sb FaS2_Sb'>
             <SlMagnifier  size={20}/>
           </Link>
-
         </div>
-
-          <BsMicFill className='Mic_Sb'/>
+        <BsMicFill className='Mic_Sb' size={16}/>
       </div>
-
         {/* <div className='search_div'>
           <Link>
             <FaSearch className='searchIcon_SearchBar'/>
@@ -41,6 +36,6 @@ const Searchbar = () => {
         </div> */}
     </>
   )
-}
+};
 
-export default Searchbar
+export default Searchbar;
