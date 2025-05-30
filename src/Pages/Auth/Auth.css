@@ -1,0 +1,27 @@
+/* .full{
+    margin: 0;
+    padding: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+.ContainerBox{
+    margin: 0;
+    padding: 0;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid red;
+}
+
+.response{
+    width: 50vw;
+    background-color: white;
+    border: 1px solid red;
+} */
