@@ -11,24 +11,25 @@ const YouTubeContextProvider = (props) => {
 
   const [history, setHistory] = useState([]);
   const [likedVideo, setLikedVideo] = useState([]);
+  const [disLikedVideo, setDisLikedVideo] = useState([]);
   const [watchLater, setWatchLater] = useState([]);
   const [playlists, setPlaylists] = useState([]);
   const [subscribers, setSubscribers] = useState([]);
   const [subscribedChannels, setSubscribedChannels] = useState([]);
-  
+
   const [allVideos, setAllVideos] = useState(initialVideos);
   const [playVideo, setPlayVideo] = useState({});
   // const [commentObject, setCommentObject] = useState([]);
   const [drawSlidbar, setDrawSlidbar] = useState(false);
   const navigate = useNavigate();
-  
+
   const handleCreateAccount = async (userInfo) => {
     const { userName, email, phone, password } = userInfo;
     if (userName && email && phone && password) {
       const existingUsers = JSON.parse(localStorage.getItem("allUsers")) || [];
 
-      const isDuplicate = existingUsers.some(user => user.email === email);
-      if(isDuplicate) {
+      const isDuplicate = existingUsers.some((user) => user.email === email);
+      if (isDuplicate) {
         alert("User with this email already exists!");
         return;
       }
@@ -53,10 +54,11 @@ const YouTubeContextProvider = (props) => {
     }
   };
 
-  const handleLogin = async ( userInfo ) => {
-    if (userInfo.email  && userInfo.password ) {
-      const account = allUsers.find(
-        (item) => item.email === userInfo.email && item.password === userInfo.password
+  const handleLogin = async (userInfo) => {
+    if (userInfo.email && userInfo.password) {
+      const account = await allUsers.find(
+        (item) =>
+          item.email === userInfo.email && item.password === userInfo.password
       );
       if (account) {
         setUser(account);
@@ -95,50 +97,143 @@ const YouTubeContextProvider = (props) => {
     setUser({});
     setHistory([]);
     setLikedVideo([]);
+    setDisLikedVideo([]);
     setWatchLater([]);
     setPlaylists([]);
     setSubscribers([]);
     setSubscribedChannels([]);
     navigate("/youtube/feed/accounts/login");
-  }
+  };
 
   const handleSelectVideo = (video) => {
     setPlayVideo(video);
-    setHistory((prevHistory)=>{
+    setHistory((prevHistory) => {
       const alreadyExists = prevHistory.includes(video.id);
-      if(alreadyExists){
-        const updatedHistory = prevHistory.filter((id)=> id !== video.id);
+      if (alreadyExists) {
+        const updatedHistory = prevHistory.filter((id) => id !== video.id);
         return [...updatedHistory, video.id];
-      }
-      else{
+      } else {
         return [...prevHistory, video.id];
       }
-    })
+    });
     navigate("/youtube/feed/videopage");
   };
 
   const handleAddLike = async (id) => {
-    // await axios.get('http://localhost:5500/api/v1/subscription/getSubscribedChannels')
-    //       .then(res => setMsg(res.data))
-    //       .then(console.log("msg is :", msg))
-    //       .catch(err => console.error("error1 is :", err))
+    if (!user?.email) {
+      alert("Please login to like a video!");
+      return;
+    }
+    const updatedVideos = allVideos.map((video) => {
+      if (video.id === id) {
+        let updatedLikes;
+        let updatedDisLikes;
+        const hasDisLiked = video.disLikes?.some((disLike) => disLike.email === user.email);
+        if( hasDisLiked) {
+          updatedDisLikes = video.disLikes?.filter(
+            (disLike) => disLike.email !== user.email
+          );
+          video.disLikes = updatedDisLikes;
+        }
+        const hasLiked = video.likes?.some((like) => like.email === user.email);
+        if (hasLiked) {
+          updatedLikes = video.likes.filter(
+            (like) => like.email !== user.email
+          );
+        } else {
+          updatedLikes = [
+            ...(video.likes || []),
+            { email: user.email || "Guest" },
+          ];
+        }
+        const updatedVideo = {
+          ...video,
+          likes: updatedLikes,
+        };
+        setPlayVideo(updatedVideo);
+        console.log("Liked Video is :", updatedVideo);
+        return updatedVideo;
+      }
+      return video;
+    });
+    setAllVideos(updatedVideos);
 
-    // setPlayVideo((pre)=>{
-    //   return { ...pre, pre.likes = playVideo.likes+1 };
-    // });
-
-    if(!likedVideo.includes(id)){
+    if(disLikedVideo?.includes(id)) {
+      let updatedDisLikedVideo = disLikedVideo?.filter((videoId) => videoId !== id);
+      setDisLikedVideo(updatedDisLikedVideo);
+    }
+    if (!likedVideo.includes(id)) {
       setLikedVideo((pre) => {
         return [...pre, id];
       });
+    } else {
+      let updatedLikedVideo = likedVideo.filter((videoId) => videoId !== id);
+      setLikedVideo(updatedLikedVideo);
     }
-    // console.log("show", id);
-    // console.log("likedvid11", likedVideo);
+    console.log("Liked Video is :", likedVideo);
   };
 
-  const handleAddComment = (comment) => {
+  const handleAddDisLike = async (id) => {
+    if (!user?.email) {
+      alert("Please login to disLike a video!");
+      return;
+    }
     const updatedVideos = allVideos.map((video) => {
-      if(video.id === playVideo.id){
+      if (video.id === id) {
+        let updatedDisLikes;
+        let updatedLikes;
+        const hasLiked = video.likes?.some((like) => like.email === user.email);
+        if( hasLiked) {
+          updatedLikes = video.likes?.filter(
+            (like) => like.email !== user.email
+          );
+          video.likes = updatedLikes;
+        }
+        const hasDisLiked = video.disLikes?.some(
+          (disLike) => disLike.email === user.email
+        );
+        if (hasDisLiked) {
+          updatedDisLikes = video.disLikes?.filter(
+            (disLike) => disLike.email !== user.email
+          );
+        } else {
+          updatedDisLikes = [
+            ...(video.disLikes || []),
+            {
+              email: user.email || "Guest",
+            },
+          ];
+        }
+        const updatedVideo = {
+          ...video,
+          disLikes: updatedDisLikes,
+        };
+        setPlayVideo(updatedVideo);
+        console.log("DisLiked Video is :", updatedVideo);
+        return updatedVideo;
+      }
+      return video;
+    });
+    setAllVideos(updatedVideos);
+    if(likedVideo?.includes(id)) {
+      let updatedLikedVideo = likedVideo?.filter((videoId) => videoId !== id);
+      setLikedVideo(updatedLikedVideo);
+    }
+    if (!disLikedVideo.includes(id)) {
+      setDisLikedVideo((pre) => {
+        return [...pre, id];
+      });
+    } else {
+      let updatedDisLikedVideo = disLikedVideo.filter(
+        (videoId) => videoId !== id
+      );
+      setDisLikedVideo(updatedDisLikedVideo);
+    }
+    console.log("DisLiked Video is :", disLikedVideo);
+  };
+  const handleAddComment = async (comment, id) => {
+    const updatedVideos = allVideos.map((video) => {
+      if (video.id === id) {
         const updatedVideo = {
           ...video,
           comments: [
@@ -147,7 +242,7 @@ const YouTubeContextProvider = (props) => {
               userName: user.userName || "Guest",
               text: comment,
               time: new Date().toLocaleTimeString(),
-              date: new Date().toLocaleDateString()
+              date: new Date().toLocaleDateString(),
             },
           ],
         };
@@ -159,25 +254,35 @@ const YouTubeContextProvider = (props) => {
     setAllVideos(updatedVideos);
   };
 
-  const update = useCallback(async() => {
+  const update = useCallback(async () => {
     const updatedUser = {
       ...user,
       history,
       likedVideo,
+      disLikedVideo,
       watchLater,
       playlists,
       subscribers,
       subscribedChannels,
     };
-    if( JSON.stringify(user) !== JSON.stringify(updatedUser)){
+    if (JSON.stringify(user) !== JSON.stringify(updatedUser)) {
       setUser(updatedUser);
-      const updatedUsers = allUsers.map((item) => 
-         item.email === user.email ? updatedUser : item
+      const updatedUsers = allUsers.map((item) =>
+        item.email === user.email ? updatedUser : item
       );
       setAllUsers(updatedUsers);
     }
-    
-  },[user, allUsers, history, likedVideo, watchLater, playlists, subscribers, subscribedChannels]);
+  }, [
+    user,
+    allUsers,
+    history,
+    likedVideo,
+    disLikedVideo,
+    watchLater,
+    playlists,
+    subscribers,
+    subscribedChannels,
+  ]);
 
   useEffect(() => {
     setHistory(history.reverse());
@@ -185,54 +290,78 @@ const YouTubeContextProvider = (props) => {
 
   useEffect(() => {
     update();
-  }, [history, likedVideo, watchLater, playlists, subscribedChannels, subscribers]);
+  }, [
+    history,
+    likedVideo,
+    disLikedVideo,
+    watchLater,
+    playlists,
+    subscribedChannels,
+    subscribers,
+  ]);
 
   useEffect(() => {
     localStorage.setItem("allUsers", JSON.stringify(allUsers));
-  },[allUsers]);
+  }, [allUsers]);
 
   useEffect(() => {
-    if(user && Object.keys(user).length > 0){
+    if (user && Object.keys(user).length > 0) {
       localStorage.setItem("user", JSON.stringify(user));
     }
-  },[user]);
+  }, [user]);
 
   useEffect(() => {
-    const AllUsers = JSON.parse( localStorage.getItem("allUsers")) || [];
-    const User = JSON.parse( localStorage.getItem("user")) || {};
+    const AllUsers = JSON.parse(localStorage.getItem("allUsers")) || [];
+    const User = JSON.parse(localStorage.getItem("user")) || {};
     setAllUsers(AllUsers);
     setUser(User);
-    if( User && Object.keys(User).length > 0){
+    if (User && Object.keys(User).length > 0) {
       setHistory(User.history || []);
       setLikedVideo(User.likedVideo || []);
+      setDisLikedVideo(User.disLikedVideo || []);
       setWatchLater(User.watchLater || []);
       setPlaylists(User.playlists || []);
       setSubscribers(User.subscribers || []);
       setSubscribedChannels(User.subscribedChannels || []);
     }
-  },[]);
+  }, []);
 
   const value = {
-    allUsers, setAllUsers,
-    user, setUser,
-    signUp, setSignUp,
+    allUsers,
+    setAllUsers,
+    user,
+    setUser,
+    signUp,
+    setSignUp,
     navigate,
-    drawSlidbar, setDrawSlidbar,
-    playVideo, setPlayVideo,
+    drawSlidbar,
+    setDrawSlidbar,
+    playVideo,
+    setPlayVideo,
     // commentObject, setCommentObject,
-    history, setHistory,
-    likedVideo, setLikedVideo,
-    playlists, setPlaylists,
-    watchLater, setWatchLater,
-    subscribedChannels, setSubscribedChannels,
-    subscribers, setSubscribers,
+    history,
+    setHistory,
+    likedVideo,
+    setLikedVideo,
+    disLikedVideo,
+    setDisLikedVideo,
+    playlists,
+    setPlaylists,
+    watchLater,
+    setWatchLater,
+    subscribedChannels,
+    setSubscribedChannels,
+    subscribers,
+    setSubscribers,
     handleCreateAccount,
     handleLogin,
     handleLogout,
     handleSelectVideo,
     handleAddLike,
-    allVideos, setAllVideos,
-    handleAddComment
+    handleAddDisLike,
+    allVideos,
+    setAllVideos,
+    handleAddComment,
   };
   return (
     <YouTubeContext.Provider value={value}>

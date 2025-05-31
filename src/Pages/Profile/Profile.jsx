@@ -10,7 +10,7 @@ const Profile = () => {
       <div className='container_Lib'>
         <div className='child_container1_Lib'>
           <div className='User0_Lib'>
-            <p className='char0_Lib'>{user.userName ? user.userName[0]: 'R'}</p>
+            <p className='char0_Lib'>{user.userName ? user.userName[0].toUpperCase(): 'R'}</p>
           </div>
           <div className='channel_user_Lib'>
             <div to={'/youtube/feed/channel'} className='link_full_Lib'>

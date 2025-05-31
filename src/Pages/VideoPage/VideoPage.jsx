@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import "./VideoPage.css";
 import { YouTubeContext } from "../../Context";
 import { IoMdNotificationsOutline } from "react-icons/io";
+import { BiSolidLike } from "react-icons/bi";
+import { BiSolidDislike } from "react-icons/bi";
 import { SlActionRedo } from "react-icons/sl";
 import { SlLike } from "react-icons/sl";
 import { SlDislike } from "react-icons/sl";
@@ -13,7 +15,7 @@ import Comment from "../../Components/Comment/Comment";
 // import axios from "axios";
 
 const VideoPage = () => {
-  const { playVideo, handleAddLike, user, handleAddComment, allVideos } = useContext(YouTubeContext);
+  const { playVideo, handleAddLike, user, handleAddComment, handleAddDisLike, allVideos } = useContext(YouTubeContext);
     const [commentText, setCommentText] = useState('');
 
     const handleCommentChange = (e) => {
@@ -44,13 +46,31 @@ const VideoPage = () => {
           <div className="L_S_M_div_VP">
             <div className="box_div_VP">
               <div className="LD_div_VP LD_1_VP hover" onClick={() => handleAddLike(playVideo.id)}>
-                <SlLike size={20} className="icon_VP" />
-                <p>Like</p>
+                {user?.likedVideo?.includes(playVideo.id) ? (
+                  <>
+                    <BiSolidLike  size={20} className="icon_VP" />
+                    <p>{playVideo?.likes?.length || 0}</p>
+                  </>
+                ) :(
+                  <>
+                    <SlLike size={20} className="icon_VP" />
+                    <p>{playVideo?.likes?.length || 0}</p>
+                  </>
+                )}
               </div>
               <span className="Vline_VP"></span>
-              <div className="LD_div_VP LD_2_VP hover">
-                <SlDislike size={20} className="icon_VP" />
-                {/* <p>Dislike</p> */}
+              <div className="LD_div_VP LD_2_VP hover" onClick={() => handleAddDisLike(playVideo.id)}>
+                {user?.disLikedVideo?.includes(playVideo.id) ? (
+                  <>
+                    <BiSolidDislike size={20} className="icon_VP" />
+                    <p>{playVideo?.disLikes?.length || 0}</p>
+                  </>
+                ) :(
+                  <>
+                    <SlDislike size={20} className="icon_VP" />
+                    <p>{playVideo?.disLikes?.length || 0}</p>
+                  </>
+                )}
               </div>
             </div>
             <div className="box_div_VP hover ">
@@ -72,14 +92,14 @@ const VideoPage = () => {
           {user?.userName && (
             <div className="add_comment_VP">
             <div className="char0_cmt_VP">
-              { user.userName[0].toUpperCase() }
+              { user?.userName?.[0].toUpperCase() }
             </div>
             <div className="comentTextBox_VP">
                 <input type="text" value={commentText} placeholder="Add a comment..." className="input_add_cmt_VP" onChange={(e) => {handleCommentChange(e)}}/>
                 {commentText.length > 0 && (
                   <div className="btn_CommentBox_VP">
                   <button className="btn_comment_VP hover" onClick={() => { handleCancelChange()}}>Cancel</button>
-                  <button className="btn_comment_VP hover" onClick={() => { handleAddComment(commentText); handleCancelChange()}}>Comment</button>
+                  <button className="btn_comment_VP hover" onClick={() => { handleAddComment(commentText, playVideo.id); handleCancelChange()}}>Comment</button>
                 </div>
                 )}
             </div>

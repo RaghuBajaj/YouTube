@@ -15,6 +15,7 @@ function Login() {
     phone: "",
     history: [],
     likedVideo: [],
+    disLikedVideo: [],
     watchLater: [],
     playlists: [],
     subscribers: [],
@@ -29,9 +30,11 @@ function Login() {
       phone: "",
       history: [],
       likedVideo: [],
+      disLikedVideo: [],
       watchLater: [],
-      subscribedChannels: [],
+      playlists: [],
       subscribers: [],
+      subscribedChannels: [],
     };
     setUserInfo(blank);
   }, []);
