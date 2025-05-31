@@ -10,7 +10,7 @@ const Library = () => {
       <div className='container_Lib'>
         <div className='child_container1_Lib'>
           <Link to={'/youtube/feed/accounts/profile'} className='User0_Lib'>
-            <p className='char0_Lib'>{user.userName ? user.userName[0]: 'R'}</p>
+            <p className='char0_Lib'>{user.userName ? user.userName[0].toUpperCase(): 'R'}</p>
           </Link>
           <div className='channel_user_Lib'>
             <Link to={'/youtube/feed/accounts/profile'} className='link_full_Lib'>

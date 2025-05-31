@@ -47,7 +47,7 @@ const Navbar = () => {
         <div className="sign_div_nbar">
           {user.userName ? (
             <div className="userLogo_nbar" onClick={() => { navigate("/youtube/feed/accounts/profile") }}>
-              <p>{user.userName[0]}</p>
+              <p>{user?.userName[0].toUpperCase()}</p>
             </div>
           ) : (
             <div

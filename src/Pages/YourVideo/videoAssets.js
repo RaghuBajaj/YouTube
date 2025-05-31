@@ -10,8 +10,8 @@ export const allvideos = [
     video : vid1,
     title : 'Animated Video from the course assets',
     uploader : 'Animated',
-    likes:0,
-    dislikes:0,
+    likes:[],
+    disLikes:[],
     comments:[]
   },
   {
@@ -19,8 +19,8 @@ export const allvideos = [
     video : vid2,
     title : 'Doctor-appointment-booking-app',
     uploader : 'Raghunandan Bajaj',
-    likes:0,
-    dislikes:0,
+    likes:[],
+    disLikes:[],
     comments:[]
   },
   {
@@ -28,8 +28,8 @@ export const allvideos = [
     video : vid3,
     title : 'E-commerce-website',
     uploader : 'Raghunandan Bajaj',
-    likes:0,
-    dislikes:0,
+    likes:[],
+    disLikes:[],
     comments:[]
   },
   {
@@ -37,8 +37,8 @@ export const allvideos = [
     video : vid4,
     title : 'video-1',
     uploader : 'Krishna',
-    likes:0,
-    dislikes:0,
+    likes:[],
+    disLikes:[],
     comments:[]
   },
   {
@@ -46,8 +46,8 @@ export const allvideos = [
     video : vid5,
     title : 'video-2',
     uploader : 'Hari',
-    likes:0,
-    dislikes:0,
+    likes:[],
+    disLikes:[],
     comments:[]
   },
 ];
