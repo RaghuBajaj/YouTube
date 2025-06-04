@@ -29,9 +29,9 @@ const VideoPage = () => {
     <div className="container_VP">
       <div className="Vid_part1_VP">
         <div className="vidBox_VP">
-          <video src={playVideo.video} className="vid_VP" controls />
+          <video src={playVideo?.video} className="vid_VP" controls />
         </div>
-        <p className="vidTitle_VP">{playVideo.title}</p>
+        <p className="vidTitle_VP">{playVideo?.title}</p>
         <div className="Options_div_VP">
           <div className="L_S_M_div_VP">
             <div className="char_div_VP">
@@ -39,9 +39,9 @@ const VideoPage = () => {
             </div>
             <div className="uploader_VP">{playVideo?.uploader || "Uploader"}</div>
           </div>
-          <div className="box_div_VP hover">
+          <div className="box_div_VP hover padding_VP">
             <IoMdNotificationsOutline size={22} className="icon_VP" />
-            <p>Subscribe</p>
+            <p className="text_VP">Subscribe</p>
           </div>
           <div className="L_S_M_div_VP">
             <div className="box_div_VP">
@@ -73,9 +73,9 @@ const VideoPage = () => {
                 )}
               </div>
             </div>
-            <div className="box_div_VP hover ">
+            <div className="box_div_VP hover padding_VP ">
               <SlActionRedo size={20} className="icon_VP" />
-              <p>Share</p>
+              <p className="text_VP">Share</p>
             </div>
             <div className="box_div_VP hover more_VP">
               <p></p>

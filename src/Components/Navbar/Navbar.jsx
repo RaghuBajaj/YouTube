@@ -10,13 +10,13 @@ import logo from "../../logo.png";
 import { YouTubeContext } from "../../Context";
 
 const Navbar = () => {
-  const { setSignUp, navigate, user } = useContext(YouTubeContext);
+  const { setSignUp, navigate, user, setDrawSlidbar } = useContext(YouTubeContext);
   // const [currentUser,setCurrentUser]=useState({});
   return (
     <>
       <div className="contaner_nbar">
         <div className="leftslide_nbar">
-          <div className="grid_nbar">
+          <div className="grid_nbar" onClick={() => setDrawSlidbar(true)}>
             <p></p>
             <p></p>
             <p></p>

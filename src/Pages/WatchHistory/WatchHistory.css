@@ -1,13 +1,19 @@
 .container_WH{
+    overflow-y: scroll;
+    white-space: nowrap;
+    scroll-behavior: smooth;
     width: 100%;
+    height: 100vh;
     display: flex;
-    height: auto;
     gap: 2%;
     /* border: 1px solid red; */
 }
+.container_WH::-webkit-scrollbar {
+    display: none;
+}
 .Vid_part2_WH{
-    padding: 1%;
-    width: 50vw;
+    padding: 2%;
+    width: 54vw;
     /* height: 100%; */
     display: flex;
     flex-direction: column;
