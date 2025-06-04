@@ -38,6 +38,13 @@ const YouTubeContextProvider = (props) => {
 
       setAllUsers(updatedUsers);
       setUser(userInfo);
+      setHistory([]);
+      setLikedVideo([]);
+      setDisLikedVideo([]);
+      setWatchLater([]);
+      setPlaylists([]);
+      setSubscribers([]);
+      setSubscribedChannels([]);
       navigate("/youtube");
       //   try {
       //     const res = await axios.post(`http://localhost:5500/api/v1/user/registerUser`, { ...userInfo });
@@ -56,7 +63,7 @@ const YouTubeContextProvider = (props) => {
 
   const handleLogin = async (userInfo) => {
     if (userInfo.email && userInfo.password) {
-      const account = await allUsers.find(
+      const account = allUsers?.find(
         (item) =>
           item.email === userInfo.email && item.password === userInfo.password
       );
